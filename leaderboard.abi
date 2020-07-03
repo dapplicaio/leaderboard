@@ -1,0 +1,213 @@
+{
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT ",
+    "version": "eosio::abi/1.1",
+    "types": [],
+    "structs": [
+        {
+            "name": "createlboard",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "boardname",
+                    "type": "string"
+                },
+                {
+                    "name": "gameid",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "createprize",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "boardid",
+                    "type": "uint64"
+                },
+                {
+                    "name": "mode",
+                    "type": "uint8"
+                },
+                {
+                    "name": "value",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "lboard",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "boardname",
+                    "type": "string"
+                },
+                {
+                    "name": "gameid",
+                    "type": "uint64"
+                },
+                {
+                    "name": "pot",
+                    "type": "float64"
+                },
+                {
+                    "name": "players",
+                    "type": "player_s[]"
+                },
+                {
+                    "name": "prize",
+                    "type": "prize_s"
+                }
+            ]
+        },
+        {
+            "name": "player_s",
+            "base": "",
+            "fields": [
+                {
+                    "name": "account",
+                    "type": "name"
+                },
+                {
+                    "name": "points",
+                    "type": "float64"
+                },
+                {
+                    "name": "data",
+                    "type": "string"
+                },
+                {
+                    "name": "payout",
+                    "type": "float64"
+                }
+            ]
+        },
+        {
+            "name": "prize_s",
+            "base": "",
+            "fields": [
+                {
+                    "name": "mode",
+                    "type": "uint8"
+                },
+                {
+                    "name": "values",
+                    "type": "float64[]"
+                }
+            ]
+        },
+        {
+            "name": "removelboard",
+            "base": "",
+            "fields": [
+                {
+                    "name": "boardid",
+                    "type": "uint64"
+                },
+                {
+                    "name": "owner",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "resetlboard",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "boardid",
+                    "type": "uint64"
+                },
+                {
+                    "name": "resetpool",
+                    "type": "bool"
+                }
+            ]
+        },
+        {
+            "name": "update",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "boardid",
+                    "type": "uint64"
+                },
+                {
+                    "name": "username",
+                    "type": "name"
+                },
+                {
+                    "name": "points",
+                    "type": "float64"
+                },
+                {
+                    "name": "data",
+                    "type": "string"
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "name": "createlboard",
+            "type": "createlboard",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "createprize",
+            "type": "createprize",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "removelboard",
+            "type": "removelboard",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "resetlboard",
+            "type": "resetlboard",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "update",
+            "type": "update",
+            "ricardian_contract": ""
+        }
+    ],
+    "tables": [
+        {
+            "name": "lboards",
+            "type": "lboard",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        }
+    ],
+    "ricardian_clauses": [],
+    "variants": []
+}
